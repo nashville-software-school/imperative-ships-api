@@ -1,3 +1,4 @@
+-- Run this block if you already have a database and need to re-create it
 DELETE FROM Ship;
 DELETE FROM Hauler;
 DELETE FROM Dock;
@@ -5,7 +6,10 @@ DELETE FROM Dock;
 DROP TABLE IF EXISTS Ship;
 DROP TABLE IF EXISTS Hauler;
 DROP TABLE IF EXISTS Dock;
+-- End block
 
+
+-- Run this block to create the tables and seed them with some initial data
 CREATE TABLE `Dock` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 	`location`	TEXT NOT NULL,
@@ -51,3 +55,4 @@ INSERT INTO `Ship` VALUES (null, "Becker", 5);
 INSERT INTO `Ship` VALUES (null, "Dickens", 6);
 INSERT INTO `Ship` VALUES (null, "Kunde", 6);
 INSERT INTO `Ship` VALUES (null, "Hermiston", 5);
+-- End block
